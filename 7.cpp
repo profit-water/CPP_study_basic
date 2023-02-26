@@ -30,31 +30,21 @@ int main(){
     for (i=0; i<n; i++) {
             if (i%2 == 0) {
                 for (j=0; j<n; j++) {
-                    if ( a == 'Z'+1 ) {
-                        a = 'A';
-                        arr[j][i] = a;
-                    }
-                    else{
-                        arr[j][i] = a++;
-                    }
+                    if ( a == 'Z'+1 ) a = 'A';
+                    arr[j][i] = a++;
                 }
             }
             else {
                 for (j = n-1; j>=0; j--) {
-                    if ( a == 'Z'+1 ) {
-                        a = 'A';
-                        arr[j][i] = a;
-                    }
-                    else{
-                        arr[j][i] = a++;
-                    }
+                    if ( a == 'Z'+1 ) a = 'A';
+                    arr[j][i] = a++;
                 }
             }
         }
     
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                printf("%c ", (char)arr[i][j]);
+                printf("%c ", arr[i][j]);
             }
             printf("\n");
         }
